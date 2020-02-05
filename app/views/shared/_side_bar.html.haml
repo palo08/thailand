@@ -1,0 +1,29 @@
+.side-bar
+  .search-area
+    %p.search-area__text エリア検索
+    = form_tag(checkbox_shops_path, method: :"get", class: "search-area__form") do
+      = check_box_tag :area, 1
+      = label_tag :test1, "バンコク"
+      %br
+      = check_box_tag :area, 2
+      = label_tag :test1, "チェンマイ"
+      %br
+      = check_box_tag :area, 3
+      = label_tag :test1, "プーケット"
+      %br
+      = check_box_tag :area, 4
+      = label_tag :test1, "パタヤ"
+      %br
+      = check_box_tag :area, 5
+      = label_tag :test1, "アユタヤ"
+      %p
+      = submit_tag "検索", class: "search-area__btn"
+
+    -# キーワード検索
+  .search-name
+    = form_tag(search_shops_path, method: :"get", class: "search-name__form") do
+      = label_tag :店名検索
+      = text_field_tag :name, params[:name], { placeholder: "キーワード入力", class: "search-name__field", value: "" }
+      = submit_tag "検索", class: "search-name__btn"
+
+  

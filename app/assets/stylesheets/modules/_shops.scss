@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Trebuchet;
+}
+
+.header{
+  height:80px;
+  background-color: #24a98a;
+  display: flex;
+  justify-content: space-between;
+  &__title{
+    width: 130px;
+    height: 60px;
+    margin: 10px 20px;
+    padding:5px;
+    &__text{
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      display: block
+    }
+  }
+  &__user{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    margin: 20px;
+    &__left{
+      line-height: 40px;
+      margin-left: 10px;
+      &__btn{
+        text-decoration: none;
+        color: white;
+      }
+    }
+    &__right{
+      line-height: 40px;
+      margin-left: 20px;
+      color: white;
+      &__btn{
+        text-decoration: none;
+        color: white;
+      }
+    }
+    
+  }
+}
+
+
+.side-main{
+  width: calc(100% - 300px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  .side-bar{
+    width: 230px;
+    background-color: white;
+    height: calc(100vh - 200px);
+    border: 1px solid #ddd;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    .search-area{
+      height: 50%;
+      width: 100%;
+      border: 1px solid #ddd;
+      overflow: scroll;
+      line-height: 50px;
+      text-align: center;
+      &__text{
+        font-weight: bold;
+      }
+      #area{
+        
+      }
+      &__btn{
+        display: inline-block;
+        border-radius : 18%;
+        font-size     : 12pt;
+        text-align    : center;
+        cursor        : pointer;
+        padding       : 12px 12px;
+        background    : rgba(36, 169, 138, 0.95);
+        color         : #ffffff;
+        line-height   : 1em;
+        transition    : .3s;
+        box-shadow    : 1px 1px 2px #666666;
+        border        : 2px solid rgba(36, 169, 138, 0.95);
+        margin-bottom: 20px;
+      }
+      &__btn:hover {
+        box-shadow    : none;
+        color         : rgba(36, 169, 138, 0.95);
+        background    : #ffffff;
+      }
+    }
+    .search-name{
+      font-weight: bold;
+      height: 50%;
+      width: 100%;
+      overflow: auto;
+      line-height: 50px;
+      text-align: center;
+      padding-top: 20px;
+      #name{
+        margin: 30px 0;
+        padding: 5px 0;
+      }
+      &__form{
+        height:100%;
+      }
+      &__field{
+        font-weight: normal;
+        border: 1px solid #24a98a;
+        margin: 0 5px;
+      }
+      &__btn{
+        display: inline-block;
+        border-radius : 18%;
+        font-size     : 12pt;
+        text-align    : center;
+        cursor        : pointer;
+        padding       : 12px 12px;
+        background    : rgba(36, 169, 138, 0.95);
+        color         : #ffffff;
+        line-height   : 1em;
+        transition    : .3s;
+        box-shadow    : 1px 1px 2px #666666;
+        border        : 2px solid rgba(36, 169, 138, 0.95);
+        margin-top: 10px;
+      }
+      &__btn:hover {
+        box-shadow    : none;
+        color         : rgba(36, 169, 138, 0.95);
+        background    : #ffffff;
+      }
+    }
+  }
+}
+
+.main{
+  width: 100%;
+  height: calc(100vh - 90px);
+  white-space:nowrap;
+  overflow:scroll;
+  .shop-lists{
+    overflow:scroll;
+    .shop{
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      height: 300px;
+      width:100%;
+      padding:10px 0;
+      &__image{
+        width: 38%;
+      }
+      &__info{
+        width:58%;
+        margin-left:10px;
+        white-space:nowrap;
+        overflow:scroll;
+        &__name{
+          height: 13%;
+          width:100%;
+          margin-bottom: 10px;
+          font-weight: bold;
+          font-size: 20px;
+          &__text{
+            text-decoration: none;
+            color: black;
+          }
+        }
+        &__genre{
+          height: 13%;
+          width:100%;
+          margin-bottom: 10px;
+        }
+        &__address{
+          height: 13%;
+          width:100%;
+          margin-bottom: 10px;
+          &__map{
+            text-decoration: none;
+            color: blue;
+          }
+        }
+        &__business-times{
+          height: 13%;
+          width:100%;
+          margin-bottom: 10px;
+        }
+        &__holiday{
+          height: 13%;
+          width:100%;
+          margin-bottom: 10px;
+        }
+        &__japanese-staff{
+          height: 13%;
+          width:100%;
+          margin-bottom: 10px;
+        }
+        &__nothing{
+          font-size: 20px;
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.menu-lists{
+  height:150px;
+  width:1140px;
+  margin: 0 auto;
+  overflow: auto;
+  border: 1px solid #ddd;
+  &__title{
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    &__name{
+      font-size: 20px;
+      margin-left:50px
+    }
+    &__fee{
+      font-size: 20px;
+      margin-right: 50px;
+    }
+  }
+}
+
+.show-shop{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  height: 300px;
+  width:100%;
+  padding:10px 0;
+  &__image{
+    width: 38%;
+    margin-left:60px;
+  }
+  &__info{
+    width:50%;
+    margin-left:10px;
+    &__name{
+      height: 13%;
+      width:100%;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 20px;
+      &__text{
+        text-decoration: none;
+        color: black;
+      }
+    }
+    &__genre{
+      height: 13%;
+      width:100%;
+      margin-bottom: 10px;
+    }
+    &__address{
+      height: 13%;
+      width:100%;
+      margin-bottom: 10px;
+      &__map{
+        text-decoration: none;
+        color: blue;
+      }
+    }
+    &__business-times{
+      height: 13%;
+      width:100%;
+      margin-bottom: 10px;
+    }
+    &__holiday{
+      height: 13%;
+      width:100%;
+      margin-bottom: 10px;
+    }
+    &__japanese-staff{
+      height: 13%;
+      width:100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.shop-map{
+  width: 50%;
+  height: 250px;
+  background-color: plum;
+  margin: 0 auto;
+}
+
+.footer{
+  height:80px;
+  margin-top: auto;
+  background-color: #24a98a;
+  text-align:center;
+  line-height: 80px;
+  .reservation-btn{
+    font-weight: bold;
+    padding: 10px 30px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+}
+
+// スライドショー用
+#slide{
+  width: calc(100% - 300px);
+  height: 300px;
+  margin: 80px auto;
+  position:relative;
+  }
+#slide img{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+}
+

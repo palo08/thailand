@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Thailand
+    = csrf_meta_tags
+
+    %link{href: "/assets/stylesheets/slick-theme.css",type: "text/css"}
+
+    %link{href: "/assets/stylesheets/slick.css",type: "text/css"}
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+
+    %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
+
+    %script{href: "/assets/javascripts/slick.js",type: "text/javascript"}
+
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = yield

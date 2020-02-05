@@ -1,0 +1,17 @@
+.header
+  .header__title
+    = link_to "日本人専門  タイ  エステ", "/", class: "header__title__text"
+  %span.image
+    = image_tag "header.jpeg", size: "200x80"
+  .header__user
+    - if user_signed_in?
+      .header__user__left
+        =link_to "ログアウト",  destroy_user_session_path, method: :delete, class: 'header__user__left__btn'
+      .header__user__right
+        = current_user.name
+    - else
+      .header__user__left
+        = link_to "ログイン", new_user_session_path, class: 'header__user__left__btn'
+      .header__user__right
+        = link_to "新規登録", new_user_registration_path, class: 'header__user__right__btn'
+
