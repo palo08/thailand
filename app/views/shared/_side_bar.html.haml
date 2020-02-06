@@ -1,25 +1,23 @@
 .side-bar
   .search-area
     %p.search-area__text エリア検索
-    = form_tag(checkbox_shops_path, method: :"get", class: "search-area__form") do
-      = check_box_tag :area, 1
-      = label_tag :test1, "バンコク"
+    = form_tag(select_shops_path, method: :"get", class: "search-area__form") do
+      = radio_button_tag :area, "1", false, id: 'bankoku'
+      = label_tag :test1, "バンコク", for: 'bankoku'
       %br
-      = check_box_tag :area, 2
+      = radio_button_tag :area, "2", false, id: 'tyenmai'
       = label_tag :test1, "チェンマイ"
       %br
-      = check_box_tag :area, 3
+      = radio_button_tag :area, "3", false, id: 'puketto'
       = label_tag :test1, "プーケット"
       %br
-      = check_box_tag :area, 4
+      = radio_button_tag :area, "4", false, id: 'pataya'
       = label_tag :test1, "パタヤ"
       %br
-      = check_box_tag :area, 5
+      = radio_button_tag :area, "5", false, id: 'ayutaya'
       = label_tag :test1, "アユタヤ"
       %p
       = submit_tag "検索", class: "search-area__btn"
-
-    -# キーワード検索
   .search-name
     = form_tag(search_shops_path, method: :"get", class: "search-name__form") do
       = label_tag :店名検索

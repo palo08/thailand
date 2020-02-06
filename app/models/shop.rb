@@ -7,18 +7,18 @@ class Shop < ApplicationRecord
   validates :address, presence: true, uniqueness: true
 
 
-  # エリア検索
-  def self.checkbox(search)
-    return Shop.all unless search
-    Shop.find_by_sql(["select * from shops where area_id = ?", search.to_i])
-  end
-
-
+  
   # キーワード検索
   def self.search(search)
     return Shop.all unless search
     search = "%#{search}%"
     Shop.where('name LIKE(?)', "%#{search}%")
+  end
+
+  # エリア検索
+  def self.select(search)
+    return Shop.all unless search
+    Shop.find_by_sql(["select * from shops where area_id = ?", search.to_i])
   end
 
 end

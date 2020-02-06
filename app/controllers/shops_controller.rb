@@ -20,14 +20,12 @@ class ShopsController < ApplicationController
 
   # キーワード検索
   def search
-    # binding.pry
     @shops = Shop.search(params[:name])
   end
 
   # エリア検索
-  def checkbox
-    # binding.pry
-    @shops = Shop.checkbox(params[:area])
+  def select
+    @shops = Shop.select(params[:area])
   end
 
 

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       get 'search'
     end
     collection do
-      get 'checkbox'
+      get 'select'
     end
   end
 
