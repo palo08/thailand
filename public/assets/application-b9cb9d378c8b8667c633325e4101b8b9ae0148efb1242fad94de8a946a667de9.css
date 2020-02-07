@@ -1,0 +1,686 @@
+/*!
+ * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
+ * http://cssreset.com
+ * Copyright 2012 Yahoo! Inc. All rights reserved.
+ * http://yuilibrary.com/license/
+ */
+/*
+    TODO will need to remove settings on HTML since we can't namespace it.
+    TODO with the prefix, should I group by selector or property for weight savings?
+*/
+/* line 11, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/*
+  TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+  TODO test putting a class on HEAD.
+      - Fails on FF.
+*/
+/* line 22, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 50, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 54, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+fieldset,
+img {
+  border: 0;
+}
+
+/*
+  TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+/* line 61, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 74, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 79, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+caption,
+th {
+  text-align: left;
+}
+
+/* line 83, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 92, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+q:before,
+q:after {
+  content: '';
+}
+
+/* line 96, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* to preserve line-height and selector appearance */
+/* line 102, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+sup {
+  vertical-align: text-top;
+}
+
+/* line 105, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+sub {
+  vertical-align: text-bottom;
+}
+
+/* line 108, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*to enable resizing for IE*/
+/* line 116, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+/*because legend doesn't inherit in IE */
+/* line 122, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+legend {
+  color: #000;
+}
+
+/* YUI CSS Detection Stamp */
+/* line 126, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/_reset.scss */
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+/* line 1, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Trebuchet;
+}
+
+/* line 12, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.header {
+  height: 80px;
+  background-color: #24a98a;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 17, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.header__title {
+  width: 130px;
+  height: 60px;
+  margin: 10px 20px;
+  padding: 5px;
+}
+/* line 22, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.header__title__text {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+/* line 30, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.header__user {
+  width: 220px;
+  height: 40px;
+  display: flex;
+  margin: 20px;
+  font-size: 20px;
+}
+/* line 36, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.header__user__left {
+  line-height: 40px;
+  margin-left: 10px;
+}
+/* line 39, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.header__user__left__btn {
+  text-decoration: none;
+  color: white;
+}
+/* line 44, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.header__user__right {
+  line-height: 40px;
+  margin-left: 20px;
+  color: white;
+}
+/* line 48, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.header__user__right__btn {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 58, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main {
+  width: calc(100% - 300px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+/* line 63, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar {
+  width: 230px;
+  background-color: white;
+  height: calc(100vh - 200px);
+  border: 1px solid #ddd;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+/* line 70, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar .search-area {
+  height: 50%;
+  width: 100%;
+  border: 1px solid #ddd;
+  overflow: scroll;
+  line-height: 50px;
+  text-align: center;
+}
+/* line 77, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar .search-area__text {
+  font-weight: bold;
+  font-size: 18px;
+}
+/* line 81, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar .search-area__btn {
+  display: inline-block;
+  border-radius: 18%;
+  font-size: 12pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 12px;
+  background: rgba(36, 169, 138, 0.95);
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 1px 1px 2px #666666;
+  border: 2px solid rgba(36, 169, 138, 0.95);
+  margin-bottom: 20px;
+}
+/* line 96, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar .search-area__btn:hover {
+  box-shadow: none;
+  color: rgba(36, 169, 138, 0.95);
+  background: #ffffff;
+}
+/* line 102, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar .search-name {
+  font-weight: bold;
+  height: 50%;
+  width: 100%;
+  overflow: auto;
+  line-height: 50px;
+  text-align: center;
+  padding-top: 20px;
+}
+/* line 110, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar .search-name #name {
+  margin: 30px 0;
+  padding: 5px 0;
+}
+/* line 114, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar .search-name__form {
+  height: 100%;
+  font-size: 18px;
+}
+/* line 118, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar .search-name__field {
+  font-weight: normal;
+  border: 1px solid #24a98a;
+  margin: 0 5px;
+}
+/* line 123, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar .search-name__btn {
+  display: inline-block;
+  border-radius: 18%;
+  font-size: 12pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 12px;
+  background: rgba(36, 169, 138, 0.95);
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 1px 1px 2px #666666;
+  border: 2px solid rgba(36, 169, 138, 0.95);
+  margin-top: 10px;
+}
+/* line 138, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.side-main .side-bar .search-name__btn:hover {
+  box-shadow: none;
+  color: rgba(36, 169, 138, 0.95);
+  background: #ffffff;
+}
+
+/* line 147, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main {
+  width: 100%;
+  height: calc(100vh - 90px);
+  white-space: nowrap;
+  overflow: scroll;
+}
+/* line 152, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists {
+  overflow: scroll;
+}
+/* line 154, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  height: 300px;
+  width: 100%;
+  padding: 10px 0;
+}
+/* line 160, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__image {
+  width: 38%;
+}
+/* line 163, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__info {
+  width: 58%;
+  margin-left: 40px;
+  white-space: nowrap;
+  overflow: scroll;
+}
+/* line 168, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__info__name {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* line 174, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__info__name__text {
+  text-decoration: none;
+  color: black;
+}
+/* line 179, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__info__genre {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 184, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__info__address {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 188, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__info__address__map {
+  text-decoration: none;
+  color: blue;
+}
+/* line 193, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__info__business-times {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 198, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__info__holiday {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 203, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__info__japanese-staff {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 208, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.main .shop-lists .shop__info__nothing {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* line 218, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.menu-lists {
+  height: 150px;
+  width: 1140px;
+  margin: 0 auto;
+  overflow: auto;
+  border: 1px solid #ddd;
+}
+/* line 224, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.menu-lists__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+}
+/* line 229, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.menu-lists .menu {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 232, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.menu-lists .menu__name {
+  font-size: 20px;
+  margin-left: 50px;
+}
+/* line 236, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.menu-lists .menu__fee {
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+/* line 243, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  height: 300px;
+  width: 100%;
+  padding: 10px 0;
+}
+/* line 249, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop__image {
+  width: 38%;
+}
+/* line 252, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop__info {
+  width: 58%;
+  margin-left: 40px;
+  white-space: nowrap;
+  overflow: scroll;
+}
+/* line 257, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop__info__name {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* line 263, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop__info__name__text {
+  text-decoration: none;
+  color: black;
+}
+/* line 268, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop__info__genre {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 273, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop__info__address {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 277, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop__info__address__map {
+  text-decoration: none;
+  color: blue;
+}
+/* line 282, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop__info__business-times {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 287, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop__info__holiday {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 292, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.show-shop__info__japanese-staff {
+  height: 13%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* line 300, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.shop-map {
+  width: 50%;
+  height: 250px;
+  background-color: plum;
+  margin: 0 auto;
+}
+
+/* line 307, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.footer {
+  height: 80px;
+  margin-top: auto;
+  background-color: #24a98a;
+  text-align: center;
+  line-height: 80px;
+}
+/* line 313, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+.footer .reservation-btn {
+  font-weight: bold;
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* line 327, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+#slide {
+  width: calc(100% - 300px);
+  height: 300px;
+  margin: 80px auto;
+  position: relative;
+}
+
+/* line 333, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/_shops.scss */
+#slide img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* line 2, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .account-page__inner {
+  width: 980px;
+  margin: 60px auto;
+  padding: 60px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+/* line 10, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
+  float: left;
+  width: 50%;
+}
+/* line 14, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .account-page__inner:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 22, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .account-page__header h2 {
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: 200;
+}
+/* line 28, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .account-page__header h2:after {
+  content: '';
+  display: block;
+  width: 60px;
+  margin-top: 5px;
+  border-bottom: 1px solid #38aef0;
+}
+/* line 37, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .account-page__header h5 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 200;
+}
+/* line 43, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .account-page__header .btn {
+  margin-top: 20px;
+  color: #fff;
+  background-color: #ccc;
+  font-size: 14px;
+}
+/* line 51, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .field {
+  margin-bottom: 10px;
+}
+/* line 54, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .field .field-label {
+  padding: 10px 0;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 200;
+}
+/* line 60, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .field .field-label i {
+  font-size: 11px;
+}
+/* line 66, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .field .field-input input {
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+/* line 74, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .btn {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+}
+/* line 85, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page input[type='submit'] {
+  float: left;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #38aef0;
+}
+/* line 93, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .field-label .field_with_errors {
+  display: inline-block;
+  color: #d65f4c;
+  font-weight: 400;
+}
+/* line 101, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .field-input .field_with_errors {
+  position: relative;
+}
+/* line 104, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+.account-page .field-input .field_with_errors:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: #d65f4c;
+}
+
+/* line 118, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+#error_explanation {
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+/* line 124, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+#error_explanation h2 {
+  margin-bottom: 10px;
+  color: #d65f4c;
+  font-size: 14px;
+}
+/* line 130, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+#error_explanation ul {
+  margin: 0;
+  padding-left: 17px;
+  list-style: square;
+}
+/* line 136, /Users/masuiyuuta/projects/thailand/app/assets/stylesheets/modules/user.scss */
+#error_explanation li {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
