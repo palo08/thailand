@@ -11,23 +11,9 @@
           = "#{menu.fee}バーツ"
 
   .side-main
-    .show-shop
-      .show-shop__image
-        = image_tag @shop.images[0].image, size: "354x279"
-      .show-shop__info
-        .show-shop__info__name
-          = @shop.name
-        .show-shop__info__genre
-          = "ジャンル: #{@shop.genre}"
-        .show-shop__info__address
-          = "住所: #{@shop.address} "
-          = link_to '(地図)', "#{@shop.map_code}", target: :_blank, class: "show-shop__info__address__map"
-        .show-shop__info__business-times
-          = "営業時間: #{@shop.open_hours}時〜#{@shop.close_hours}時"
-        .show-shop__info__holiday
-          = "休日: #{@shop.holiday}"
-        .show-shop__info__japanese-staff  
-          = "日本人スタッフ: #{@shop.japanese_staff}"
+    .main
+      .shop-lists
+        = render partial: "shared/shop",locals: { shop: @shop}
   
   .footer
     = link_to "予約する", "https://airrsv.net/#{@shop.url}/calendar", class: 'reservation-btn', target: :_blank

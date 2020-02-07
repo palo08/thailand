@@ -1,7 +1,7 @@
 .header
   .header__title
     = link_to "日本人専門  タイ  エステ", "/", class: "header__title__text"
-  %span.image
+  %span.header__image
     = image_tag "header.jpeg", size: "200x80"
   .header__user
     - if user_signed_in?

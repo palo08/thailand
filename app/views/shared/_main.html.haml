@@ -1,21 +1,6 @@
 - if @shops.length > 0
   - @shops.each do |shop|
-    .shop{"data-area": "#{shop.area_id}"}
-      .shop__image
-        = image_tag shop.images[0].image, size: "354x279"
-      .shop__info
-        .shop__info__name
-          = link_to shop.name, shop_path(shop), class: 'shop__info__name__text'
-        .shop__info__genre
-          = "ジャンル: #{shop.genre}"
-        .shop__info__address
-          = "住所: #{shop.address}"
-          = link_to '(地図)', "#{shop.map_code}", target: :_blank, class: "shop__info__address__map"
-        .shop__info__business-times
-          = "営業時間: #{shop.open_hours}時〜#{shop.close_hours}時"
-        .shop__info__holiday
-          = "休日: #{shop.holiday}"
-        .shop__info__japanese-staff  
-          = "日本人スタッフ: #{shop.japanese_staff}"
+    = render partial: "shared/shop",locals: { shop: shop}
+
 - else
   %p.shop__info__nothing "一致する店舗がありません"
