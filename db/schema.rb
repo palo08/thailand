@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200201041640) do
+ActiveRecord::Schema.define(version: 20200131081021) do
 
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "area",       null: false
@@ -36,16 +36,6 @@ ActiveRecord::Schema.define(version: 20200201041640) do
     t.index ["shop_id"], name: "index_menus_on_shop_id", using: :btree
   end
 
-  create_table "reservations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.date     "date",       null: false
-    t.time     "start_time", null: false
-    t.time     "end_time"
-    t.integer  "shop_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["shop_id"], name: "index_reservations_on_shop_id", using: :btree
-  end
-
   create_table "shops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",           null: false
     t.string   "genre"
@@ -61,22 +51,7 @@ ActiveRecord::Schema.define(version: 20200201041640) do
     t.index ["area_id"], name: "index_shops_on_area_id", using: :btree
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                                null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["name"], name: "index_users_on_name", using: :btree
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  end
-
   add_foreign_key "images", "shops"
   add_foreign_key "menus", "shops"
-  add_foreign_key "reservations", "shops"
   add_foreign_key "shops", "areas"
 end
