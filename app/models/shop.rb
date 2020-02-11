@@ -18,7 +18,7 @@ class Shop < ApplicationRecord
   # Shopからselectboxでエリア検索
   def self.select(search)
     return Shop.all unless search
-    Shop.find_by_sql(["select * from shops where area_id = ?", search.to_i])
+    Shop.where("area_id = ?", search.to_i)
   end
 
 end
