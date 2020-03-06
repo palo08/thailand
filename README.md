@@ -35,9 +35,9 @@ Version at the time of development
 A list of massage and beauty shops is displayed on the top page. From the area search on the left, check the area you want to check, and press search to display only shops within that area. Enter a keyword from the shop search in the lower left corner and press search to display the shop names containing that keyword.
 Click a store name to go to the store's detail page. There is a reservation button at the bottom of the details page. Clicking that button will take you to the reservation page.
 
-## Install
+## Check
 
-URL: 
+URL:  https://thailandh.herokuapp.com
 
 ## Licence
 
