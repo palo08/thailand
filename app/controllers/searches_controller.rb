@@ -1,2 +1,2 @@
-class shops::SearchesController < ApplicationController
-end
+# class shops::SearchesController < ApplicationController
+# end
