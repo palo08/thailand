@@ -8,12 +8,12 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
   end
 
-  # Shopからキーワードで検索する(model:shop.rb)
+  # Shopからキーワードを含む店舗を検索
   def search
     @shops = Shop.search(params[:name])
   end
 
-  # Shopからselectboxでエリア検索(model:shop.rb)
+  # Shopからselectboxで選んだエリアを検索
   def select
     @shops = Shop.select(params[:area])
   end
