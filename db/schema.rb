@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200208121553) do
+ActiveRecord::Schema.define(version: 20200201041640) do
 
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "area",       null: false
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20200208121553) do
     t.integer  "open_hours"
     t.integer  "close_hours"
     t.integer  "area_id"
+    t.string   "url"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.index ["area_id"], name: "index_shops_on_area_id", using: :btree

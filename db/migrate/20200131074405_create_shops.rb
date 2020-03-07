@@ -10,6 +10,8 @@ class CreateShops < ActiveRecord::Migration[5.0]
       t.integer :open_hours
       t.integer :close_hours
       t.references :area, foreign_key: true
+      t.string :url
+     
 
       t.timestamps
     end
