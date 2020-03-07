@@ -1,4 +1,4 @@
 class Area < ApplicationRecord
   has_many :shops
-  validates :name, presence: true, uniqueness: true
+  validates :area, presence: true, uniqueness: true
 end
