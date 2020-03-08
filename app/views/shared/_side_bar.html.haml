@@ -2,19 +2,19 @@
   .search-area
     %p.search-area__text エリア検索
     = form_tag(select_shops_path, method: :"get", class: "search-area__form") do
-      = radio_button_tag :area, "1", false, id: 'bankoku'
+      = radio_button_tag :area, "22", false, id: 'bankoku'
       = label_tag :test1, "バンコク", for: 'bankoku'
       %br
       = radio_button_tag :area, "2", false, id: 'tyenmai'
       = label_tag :test1, "チェンマイ"
       %br
-      = radio_button_tag :area, "3", false, id: 'puketto'
+      = radio_button_tag :area, "12", false, id: 'puketto'
       = label_tag :test1, "プーケット"
       %br
-      = radio_button_tag :area, "4", false, id: 'pataya'
+      = radio_button_tag :area, "32", false, id: 'pataya'
       = label_tag :test1, "パタヤ"
       %br
-      = radio_button_tag :area, "5", false, id: 'ayutaya'
+      = radio_button_tag :area, "42", false, id: 'ayutaya'
       = label_tag :test1, "アユタヤ"
       %p
       = submit_tag "検索", class: "search-area__btn"
